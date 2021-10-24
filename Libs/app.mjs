@@ -11,7 +11,7 @@ function LoadPage(pagename) {
     alert(resp);
     page.innerHTML = resp;
 }
-
+exports = LoadPage;
 //export function LoadPage(pagename) {
 //    var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
 //    alert(resp);
