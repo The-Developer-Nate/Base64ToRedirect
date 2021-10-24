@@ -12,6 +12,4 @@ function LoadPage(pagename) {
     page.innerHTML = resp;
 }
 
-module.exports = {
-    LP = LoadPage
-}
+export function LoadPage(pagename)
