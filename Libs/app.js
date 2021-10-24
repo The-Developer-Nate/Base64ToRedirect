@@ -8,6 +8,6 @@ function httpGet(theUrl)
 }
 function LoadPage(pagename) {
     var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
-        alert(resp);
-        page.innerHTML = resp;
+    alert(resp);
+    page.innerHTML = resp;
 }
