@@ -13,7 +13,8 @@ function httpGet(theUrl)
 function LoadPage(pagename) {
     var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
     alert(resp);
-    page.innerHTML = resp;
+    document.clear();
+    document.write(resp)
 }
             LoadPage("home");
         </script>
