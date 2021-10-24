@@ -12,3 +12,5 @@ function LoadPage(pagename) {
     page.innerHTML = '';
     document.write(resp);
 }
+
+export {LoadPage}
