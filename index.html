@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" type="text/css" href="/CSS/topbar.css">
     <head>
-
+      
     </head>
     <body>
-        <script>
-function b64_to_utf8( str ) {
-  return decodeURIComponent(escape(window.atob( str )));
-}
-location.href = b64_to_utf8(new URL(window.location.href).searchParams.get("q"));
-        </script>
+      <div class="topnav">
+        <a onclick="LoadPage('home')">Home</a>
+        <a onclick="LoadPage('b64Encode')">Encode</a>
+        <a onclick="LoadPage('secEncode')">Secure Encode</a>
+      </div>
+
     </body>
 </html>
