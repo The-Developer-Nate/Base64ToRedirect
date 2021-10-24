@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function utf8_to_b64( str ) {
+  return window.btoa(unescape(encodeURIComponent( str )));
+}
+
+function b64_to_utf8( str ) {
+  return decodeURIComponent(escape(window.atob( str )));
+}
+location.href = b64_to_utf8(new URL(window.location.href).searchParams.get("q"));
+        </script>
+    </body>
+</html>
