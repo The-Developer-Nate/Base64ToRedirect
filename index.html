@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html id="page">
     <body>
-        <script>
-            var page = document.getElementById("page");
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-function LoadPage(pagename) {
-    var resp = httpGet("https://the-developer-nate.github.io/Base64ToRedirect/home.html");
-    document.clear();
-    document.write(resp)
-}
-            LoadPage("home");
-        </script>
+        <button onclick="LoadPage('home')">Home</button>
         
     </body>
 </html>
