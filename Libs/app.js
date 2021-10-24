@@ -13,4 +13,6 @@ function LoadPage(pagename) {
     document.write(resp);
 }
 
-export {LoadPage as void}
+module.exports = {
+    LoadPage = LoadPage
+}
