@@ -6,7 +6,7 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-function LoadPage1(pagename) {
+function LoadPage(pagename) {
     var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
     alert(resp);
     page.innerHTML = '';
@@ -14,5 +14,5 @@ function LoadPage1(pagename) {
 }
 
 module.exports = {
-    LoadPage = LoadPage1
+    LoadPage = LoadPage
 }
