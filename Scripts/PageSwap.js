@@ -11,6 +11,10 @@ function LoadPage(pagename) {
         var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
         page.innerHTML = '';
         document.write(resp)
+    } else if (pagename == "b64Encode") {
+        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
+        page.innerHTML = '';
+        document.write(resp)
     }
     
 }
