@@ -13,4 +13,4 @@ function LoadPage(pagename) {
     document.write(resp);
 }
 
-export {LoadPage}
+export {LoadPage as void}
