@@ -14,5 +14,5 @@ function LoadPage(pagename) {
 }
 
 module.exports = {
-    LP = LoadPage
+    LP: LoadPage
 }
