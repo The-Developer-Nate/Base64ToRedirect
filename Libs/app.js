@@ -7,9 +7,7 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 function LoadPage(pagename) {
-    if (pagename == "home") {
-        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
+    var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
         alert(resp);
         page.innerHTML = resp;
-    }
 }
