@@ -13,4 +13,4 @@ function LoadPage(pagename) {
     document.write(resp);
 }
 
-export function LoadPage();
+export function LoadPage(pagename);
