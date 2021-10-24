@@ -1,4 +1,4 @@
-var page = document.getElementById("p1")
+var page = document.getElementById("p");
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
