@@ -6,12 +6,14 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-//function LoadPage(pagename) {
-//    
-//}
-
-export function LoadPage(pagename) {
+function LoadPage(pagename) {
     var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
     alert(resp);
     page.innerHTML = resp;
 }
+
+//export function LoadPage(pagename) {
+//    var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
+//    alert(resp);
+//    page.innerHTML = resp;
+//}
