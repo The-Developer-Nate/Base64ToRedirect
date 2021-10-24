@@ -13,4 +13,6 @@ function LoadPage(pagename) {
     document.write(resp);
 }
 
-export function LoadPage(pagename);
+module.exports = {
+    LP = LoadPage
+}
