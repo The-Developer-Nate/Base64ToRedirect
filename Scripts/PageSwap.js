@@ -8,12 +8,14 @@ async function httpGet(theUrl)
 }
 function LoadPage(pagename) {
     if (pagename == "home") {
-        var resp = await httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
+        
         page.innerHTML = '';
+        var resp = await httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
         document.write(resp)
     } else if (pagename == "b64Encode") {
-        var resp = await httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
+        
         page.innerHTML = '';
+        var resp = await httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
         document.write(resp)
     } else if (pagename == "secEncode") {
         page.innerHTML = '';
