@@ -14,3 +14,5 @@ function LoadPage(pagename) {
     }
     
 }
+
+window.LP = LoadPage;
