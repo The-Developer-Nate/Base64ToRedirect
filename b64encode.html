@@ -38,8 +38,16 @@
     <body>
         <script>
             function CopyToClip() {
+                var text = utf8_to_b64(lnkk.value);
+                if (window.clipboardData) { // Internet Explorer
+                    window.clipboardData.setData("Text", text);
+                } else {
+                    unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
+                    clipboardHelper.copyString(text);
+                }
                 var lnkk = document.getElementById("linkk");
-                lnkk.value = utf8_to_b64(lnkk.value);
+                lnkk.value = 
                 lnkk.focus();
                 lnkk.select();
                 
