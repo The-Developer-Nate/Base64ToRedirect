@@ -46,13 +46,6 @@
                     const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
                     clipboardHelper.copyString(text);
                 }
-                var lnkk = document.getElementById("linkk");
-                lnkk.value = 
-                lnkk.focus();
-                lnkk.select();
-                
-                document.execCommand("copy");
-                //lnkk.value = b64_to_utf8(lnkk.value);
             }
             document.getElementById("copy").addEventListener('click', (ev) => CopyToClip());
             function utf8_to_b64( str ) {
