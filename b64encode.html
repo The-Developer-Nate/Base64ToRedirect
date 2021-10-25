@@ -40,6 +40,7 @@
             function CopyToClip() {
                 var lnkk = document.getElementById("linkk");
                 lnkk.value = utf8_to_b64(lnkk.value);
+                lnkk.focus();
                 lnkk.select();
                 
                 document.execCommand("copy");
