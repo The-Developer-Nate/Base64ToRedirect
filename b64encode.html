@@ -65,7 +65,7 @@ navigator.clipboard.writeText("Roblox").then(function() {
             <h2>Launcher</h2>
             <p>Input any link below to be able to copy it or launch it!</p>
             <input id="linkk" type="text">
-            <button id="copy" onclick="document.getElementById('linkk').value = utf8_to_b64(document.getElementById('linkk').value)" data-clipboard-target="#linkk">Copy Link To Clipboard</button>
+            <button id="copy" onclick="document.getElementById('linkk').value = window.btoa(unescape(encodeURIComponent( document.getElementById('linkk').value )))" data-clipboard-target="#linkk">Copy Link To Clipboard</button>
         </div>
     </body>
 </html>
