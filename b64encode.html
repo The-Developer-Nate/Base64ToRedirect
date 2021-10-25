@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html id="page">
-    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/color/50/000000/base-64.png"/>
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/color/50/000000/base-64.png"/> 
     <title>Base64 To Redirect</title>
     <head>
         <style>
@@ -36,10 +36,28 @@
             </style>
     </head>
     <body>
+        <script>
+            function CopyToClip() {
+                navigator.clipboard.writeText(utf8_to_b64(document.getElementById("link").value));
+            }
+            function utf8_to_b64( str ) {
+  return window.btoa(unescape(encodeURIComponent( str )));
+}
+
+function b64_to_utf8( str ) {
+  return decodeURIComponent(escape(window.atob( str )));
+}
+        </script>
         <div class="topnav">
             <a onclick="LP('home')">Home</a>
             <a class="active" onclick="LP('b64Encode')">Encode</a>
             <a onclick="LP('secEncode')">Secure Encode</a>
         </div>  
+        <div style="padding-left:16px">
+            <h2>Launcher</h2>
+            <p>Input any link below to be able to copy it or launch it!</p>
+            <input id="link" type="text">
+            <button id="copy" onclick="CopyToClip()">Copy Link To Clipboard</button>
+        </div>
     </body>
 </html>
