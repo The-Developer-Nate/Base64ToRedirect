@@ -1,5 +1,5 @@
 var page = document.getElementById("page");
-async function httpGet(theUrl)
+function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
@@ -10,12 +10,12 @@ function LoadPage(pagename) {
     if (pagename == "home") {
         
         page.innerHTML = '';
-        var resp = await httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
+        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
         document.write(resp)
     } else if (pagename == "b64Encode") {
         
         page.innerHTML = '';
-        var resp = await httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
+        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
         document.write(resp)
     } else if (pagename == "secEncode") {
         page.innerHTML = '';
