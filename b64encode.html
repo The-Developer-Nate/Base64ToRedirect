@@ -37,16 +37,7 @@
     </head>
     <body>
         <script>
-            function CopyToClipb() {
-                var text = utf8_to_b64(lnkk.value);
-                if (window.clipboardData) { // Internet Explorer
-                    window.clipboardData.setData("Text", text);
-                } else {
-                    unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-                    const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
-                    clipboardHelper.copyString(text);
-                }
-            }
+            
             document.getElementById("copy").addEventListener('click', (ev) => CopyToClip());
             function utf8_to_b64( str ) {
   return window.btoa(unescape(encodeURIComponent( str )));
@@ -54,6 +45,15 @@
 
 function b64_to_utf8( str ) {
   return decodeURIComponent(escape(window.atob( str )));
+}
+function DoCrap() {
+    var crap = utf8_to_b64(document.getElementById("linkk").value)
+    var data = [new ClipboardItem({ "text/plain": new Blob([crap], { type: "text/plain" }) })];
+navigator.clipboard.write(data).then(function() {
+  console.log("Copied to clipboard successfully!");
+}, function() {
+  console.error("Unable to write to clipboard. :-(");
+});
 }
         </script>
         <div class="topnav">
@@ -65,7 +65,7 @@ function b64_to_utf8( str ) {
             <h2>Launcher</h2>
             <p>Input any link below to be able to copy it or launch it!</p>
             <input id="linkk" type="text">
-            <button id="copy" onclick="CopyToClipb()">Copy Link To Clipboard</button>
+            <button id="copy" onclick="">Copy Link To Clipboard</button>
         </div>
     </body>
 </html>
