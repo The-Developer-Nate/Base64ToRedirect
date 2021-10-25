@@ -9,15 +9,15 @@ function httpGet(theUrl)
 function LoadPage(pagename) {
     if (pagename == "home") {
         var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
-        page.innerHTML = '';
-        document.write(resp)
+        page.innerHTML = resp;
+        //document.write(resp)
     } else if (pagename == "b64Encode") {
         var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
-        page.innerHTML = '';
-        document.write(resp)
+        page.innerHTML = resp;
+        //document.write(resp)
     } else if (pagename == "secEncode") {
-        page.innerHTML = '';
-        document.write("This page is a work in progress")
+        page.innerHTML = 'This page is a work in progress';
+        //document.write("This page is a work in progress")
     }
     
 }
