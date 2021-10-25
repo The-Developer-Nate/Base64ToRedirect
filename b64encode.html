@@ -45,7 +45,7 @@
 function b64_to_utf8( str ) {
   return decodeURIComponent(escape(window.atob( str )));
 }
-
+window.utf8tob64 = utf8_to_b64
         </script>
         <div class="topnav">
             <a onclick="LP('home')">Home</a>
@@ -56,7 +56,7 @@ function b64_to_utf8( str ) {
             <h2>Launcher</h2>
             <p>Input any link below to be able to launch it!</p>
             <input id="linkk" type="text">
-            <button onclick="window.location.href = 'https://the-developer-nate.github.io/Base64ToRedirect/redir.html?q=' + utf8_to_b64(document.getElementById('linkk'))">Launch</button>
+            <button onclick="window.location.href = 'https://the-developer-nate.github.io/Base64ToRedirect/redir.html?q=' + utf8tob64(document.getElementById('linkk'))">Launch</button>
         </div>
     </body>
 </html>
