@@ -36,8 +36,7 @@
             </style>
     </head>
     <body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-        <script>
+        <script type="module">
             
             function utf8_to_b64( str ) {
   return window.btoa(unescape(encodeURIComponent( str )));
@@ -46,15 +45,7 @@
 function b64_to_utf8( str ) {
   return decodeURIComponent(escape(window.atob( str )));
 }
-function DoCrap() {
-    var crap = utf8_to_b64(document.getElementById("linkk").value)
-    var data = [new ClipboardItem({ "text/plain": new Blob([crap], { type: "text/plain" }) })];
-navigator.clipboard.writeText("Roblox").then(function() {
-  console.log("Copied to clipboard successfully!");
-}, function() {
-  console.error("Unable to write to clipboard. :-(");
-});
-}
+
         </script>
         <div class="topnav">
             <a onclick="LP('home')">Home</a>
@@ -63,9 +54,9 @@ navigator.clipboard.writeText("Roblox").then(function() {
         </div>  
         <div style="padding-left:16px">
             <h2>Launcher</h2>
-            <p>Input any link below to be able to copy it or launch it!</p>
+            <p>Input any link below to be able to launch it!</p>
             <input id="linkk" type="text">
-            <button id="copy" onclick="document.getElementById('linkk').value = window.btoa(unescape(encodeURIComponent( document.getElementById('linkk').value )))" data-clipboard-target="#linkk">Copy Link To Clipboard</button>
+            <button onclick="window.location.href = 'https://the-developer-nate.github.io/Base64ToRedirect/redir.html?q=' + utf8_to_b64(document.getElementById('linkk'))">Launch</button>
         </div>
     </body>
 </html>
