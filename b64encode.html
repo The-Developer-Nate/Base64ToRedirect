@@ -44,7 +44,7 @@
                 lnkk.select();
                 
                 document.execCommand("copy");
-                lnkk.value = b64_to_utf8(lnkk.value);
+                //lnkk.value = b64_to_utf8(lnkk.value);
             }
             document.getElementById("copy").addEventListener('click', (ev) => CopyToClip());
             function utf8_to_b64( str ) {
