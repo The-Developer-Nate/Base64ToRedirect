@@ -38,7 +38,10 @@
     <body>
         <script>
             function CopyToClip() {
-                navigator.clipboard.writeText(utf8_to_b64(document.getElementById("link").value));
+                var lnkk = document.getElementById("link");
+                lnkk.select();
+                lnkk.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(utf8_to_b64(lnkk.value));
             }
             function utf8_to_b64( str ) {
   return window.btoa(unescape(encodeURIComponent( str )));
