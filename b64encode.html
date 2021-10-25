@@ -38,7 +38,7 @@
     <body>
         <script>
             function CopyToClip() {
-                var lnkk = document.getElementById("link");
+                var lnkk = document.getElementById("linkk");
                 lnkk.select();
                 lnkk.setSelectionRange(0, 99999);
                 navigator.clipboard.writeText(utf8_to_b64(lnkk.value));
@@ -59,7 +59,7 @@ function b64_to_utf8( str ) {
         <div style="padding-left:16px">
             <h2>Launcher</h2>
             <p>Input any link below to be able to copy it or launch it!</p>
-            <input id="link" type="text">
+            <input id="linkk" type="text">
             <button id="copy" onclick="CopyToClip()">Copy Link To Clipboard</button>
         </div>
     </body>
