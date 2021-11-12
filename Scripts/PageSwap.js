@@ -16,7 +16,7 @@ function LoadPage(pagename) {
         page.innerHTML = resp;
         //document.write(resp)
     } else if (pagename == "secEncode") {
-        page.innerHTML = '<html><body>Work in progress, <a href="https://thedevnate.github.io/Base64ToRedirect/">Return</a></body></html>';
+        page.innerHTML = 'This page is unavailable.';
         //document.write("This page is a work in progress")
     }
     
