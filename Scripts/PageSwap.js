@@ -8,15 +8,15 @@ function httpGet(theUrl)
 }
 function LoadPage(pagename) {
     if (pagename == "home") {
-        var resp = httpGet("https://raw.githubusercontent.com/TheDevNate/Base64ToRedirect/main/home.html");
+        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
         page.innerHTML = resp;
         //document.write(resp)
     } else if (pagename == "b64Encode") {
-        var resp = httpGet("https://raw.githubusercontent.com/TheDevNate/Base64ToRedirect/main/b64encode.html");
+        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
         page.innerHTML = resp;
         //document.write(resp)
     } else if (pagename == "secEncode") {
-        page.innerHTML = 'This page is a work in progress';
+        page.innerHTML = '<html><body>Work in progress, <a href="https://thedevnate.github.io/Base64ToRedirect/">Return</a></body></html>';
         //document.write("This page is a work in progress")
     }
     
