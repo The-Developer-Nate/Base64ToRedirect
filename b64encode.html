@@ -45,7 +45,13 @@
 function b64_to_utf8( str ) {
   return decodeURIComponent(escape(window.atob( str )));
 }
-window.utf8tob64 = utf8_to_b64
+window.utf8tob64 = utf8_to_b64;
+
+function Thingy() {
+  var e = utf8_to_b64(document.getElementById("linkk").value);
+  var result = "https://thedevnate.github.io/Base64ToRedirect/redir.html?q=" + e;
+  navigator.clipboard.writeText(result);
+}
         </script>
         <div class="topnav">
             <a onclick="LP('home')">Home</a>
@@ -54,10 +60,10 @@ window.utf8tob64 = utf8_to_b64
         </div>  
         <div style="padding-left:16px">
             <h2>Launcher</h2>
-            <p>I Hate javascript</p>
+            <p>Url To B64</p>
             <input id="linkk" type="text">
             <br>
-            <button onclick="document.getElementById()"></button>
+            <button onclick="Thingy();">Convert & Copy</button>
         </div>
     </body>
 </html>
