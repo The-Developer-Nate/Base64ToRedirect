@@ -52,6 +52,7 @@ function Thingy() {
   var result = "https://thedevnate.github.io/Base64ToRedirect/redir.html?q=" + e;
   navigator.clipboard.writeText(result);
 }
+window.Thingy = TH;
         </script>
         <div class="topnav">
             <a onclick="LP('home')">Home</a>
@@ -63,7 +64,7 @@ function Thingy() {
             <p>Url To B64</p>
             <input id="linkk" type="text">
             <br>
-            <button onclick="Thingy();">Convert & Copy</button>
+            <button onclick="TH();">Convert & Copy</button>
         </div>
     </body>
 </html>
