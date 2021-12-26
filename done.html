@@ -7,10 +7,9 @@
             body {
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
-                color: gray;
-                background: #11998e;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to top, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to top, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                color: white;
+                background-color: #20bf55;
+                background-image: linear-gradient(75deg, #20bf55 0%, #01baef 74%);
 
             }
             
@@ -37,6 +36,21 @@
               background-color: #04AA6D;
               color: white;
             }
+
+            button {
+              border-radius: 8px;
+              padding: 8px 28px;
+              font-size: 24px;
+              font-family:cursive;
+            }
+
+            .center {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid transparent; 
+  }
             
             </style>
     </head>
@@ -46,9 +60,10 @@
             <a onclick="LP('b64Encode')">Encode</a>
             <a onclick="LP('secEncode')">Secure Encode</a>
         </div>
-        <div style="padding-left:16px">
-            <h2>Launcher</h2>
-            <p>Url To B64</p>
-          </div>
+        <div class="center">
+          <h2>Copied to clipboard, Task Completed</h2>
+          <br>
+          <button onclick="window.close()">Close</button>
+        </div>
     </body>
 </html>
