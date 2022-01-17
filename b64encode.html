@@ -34,7 +34,7 @@
               color: white;
             }
 
-            button {
+            #styled {
               background-color: #4CAF50;
               border-radius: 8px;
             }
@@ -69,7 +69,7 @@ window.Thingy = TH;
             <p>Url To B64</p>
             <input id="linkk" type="text">
             <br>
-            <button class="styled" onclick="var e = window.btoa(unescape(encodeURIComponent( document.getElementById('linkk').value )));var result = 'https://thedevnate.github.io/Base64ToRedirect/redir.html?q=' + e;navigator.clipboard.writeText(result);window.open('https://thedevnate.github.io/Base64ToRedirect/done.html', 'Done!', 'width=1280,height=720,fullscreen=yes')">Convert & Copy</button>
+            <button id="styled" onclick="var e = window.btoa(unescape(encodeURIComponent( document.getElementById('linkk').value )));var result = 'https://thedevnate.github.io/Base64ToRedirect/redir.html?q=' + e;navigator.clipboard.writeText(result);window.open('https://thedevnate.github.io/Base64ToRedirect/done.html', 'Done!', 'width=1280,height=720,fullscreen=yes')">Convert & Copy</button>
         </div>
     </body>
 </html>
