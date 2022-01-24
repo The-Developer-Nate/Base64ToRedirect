@@ -37,11 +37,20 @@
     </head>
     <body>
       <script src="https://thedevnate.github.io/Base64ToRedirect/Scripts/PageSwap.js"></script>
+      <script>
+        function e2() {
+          location.href = "https://thedevnate.github.io/TheDevNate-Web/"
+        }
+        document.addEventListener("keypress", e2)
+      </script>
       <div class="topnav">
         <a class="active" onclick="LP('home')">Home</a>
-        <a onclick="location.href = 'sites.html'">Sites</a>
         <a onclick="LP('b64Encode')">Encode</a>
         <a onclick="LP('secEncode')">Secure Encode</a>
+      </div>
+      <div style="padding-left:16px">
+        <h2>Base64ToRedirect</h2>
+        <p>Press B to go back on this page.</p>
       </div>
     </body>
 </html>
