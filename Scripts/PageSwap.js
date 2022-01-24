@@ -19,10 +19,6 @@ function LoadPage(pagename) {
             var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
             page.innerHTML = resp;
             //document.write(resp)
-        } else if (pagename == "secEncode") {
-            var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/sec-encode.html")
-            page.innerHTML = resp;
-            //document.write("This page is a work in progress")
         } else if (pagename == "sites") {
             var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/sites.html");
             page.innerHTML = reps;
