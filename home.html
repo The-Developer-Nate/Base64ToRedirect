@@ -38,10 +38,12 @@
     <body>
       <script src="https://thedevnate.github.io/Base64ToRedirect/Scripts/PageSwap.js"></script>
       <script>
-        function e2() {
-          location.href = "https://thedevnate.github.io/TheDevNate-Web/"
+        function e2(e) {
+          if (e.key == "b") {
+            location.href = "https://thedevnate.github.io/TheDevNate-Web/"
+          }
         }
-        document.addEventListener("keypress", e2)
+        document.addEventListener("keydown", e2)
       </script>
       <div class="topnav">
         <a class="active" onclick="LP('home')">Home</a>
