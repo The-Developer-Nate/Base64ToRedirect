@@ -25,5 +25,5 @@ function LoadPage(pagename) {
         }
     }
 }
-
+// window.open('https://thedevnate.github.io/Base64ToRedirect/done.html', 'Done!', 'width=1280,height=720,fullscreen=yes')
 window.LP = LoadPage;
