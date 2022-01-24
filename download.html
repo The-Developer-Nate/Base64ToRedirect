@@ -1,0 +1,42 @@
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <style>
+            /* Style buttons */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+body {
+    background-color: #454545;
+}
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+        </style>
+    </head>
+    <body>
+        <p>Browsers have now been locked from my sites, download the app for my sites.</p>
+        <button class="btn" id="download"><i class="fa fa-download"></i> Download</button>
+        <script>
+            document.getElementById("download").addEventListener("click", () => {
+                if (navigator.platform == "Win32") {
+                    location.href = "https://github.com/TheDevNate/WebsiteApps/releases/latest/download/TheDevNate-Sites.Installer.msi"
+                } else {
+                    location.href = "https://github.com/TheDevNate/WebsiteApps/releases/latest/download/TheDevNate-Sites.zip"
+                }
+            })
+        </script>
+    </body>
+</html>
