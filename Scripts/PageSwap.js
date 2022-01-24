@@ -7,19 +7,23 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 function LoadPage(pagename) {
-    if (pagename == "home") {
-        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
-        page.innerHTML = resp;
-        //document.write(resp)
-    } else if (pagename == "b64Encode") {
-        var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
-        page.innerHTML = resp;
-        //document.write(resp)
-    } else if (pagename == "secEncode") {
-        page.innerHTML = "This page is unavailable.";
-        //document.write("This page is a work in progress")
-    }
     
+    if (navigator.userAgent != "tdnweb") {
+        location.href = "download.html"
+    } else {
+        if (pagename == "home") {
+            var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
+            page.innerHTML = resp;
+            //document.write(resp)
+        } else if (pagename == "b64Encode") {
+            var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/b64encode.html");
+            page.innerHTML = resp;
+            //document.write(resp)
+        } else if (pagename == "secEncode") {
+            page.innerHTML = "This page is unavailable.";
+            //document.write("This page is a work in progress")
+        }
+    }
 }
 
 window.LP = LoadPage;
