@@ -20,7 +20,8 @@ function LoadPage(pagename) {
             page.innerHTML = resp;
             //document.write(resp)
         } else if (pagename == "secEncode") {
-            page.innerHTML = "This page is unavailable.";
+            var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/sec-encode.html")
+            page.innerHTML = resp;
             //document.write("This page is a work in progress")
         } else if (pagename == "sites") {
             var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/sites.html");
