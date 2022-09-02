@@ -9,7 +9,6 @@ function httpGet(theUrl)
 function LoadPage(pagename) {
     
     if (navigator.userAgent != "tdnweb") {
-        location.href = "download.html"
     } else {
         if (pagename == "home") {
             var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
