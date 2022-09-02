@@ -8,8 +8,6 @@ function httpGet(theUrl)
 }
 function LoadPage(pagename) {
     
-    if (navigator.userAgent != "tdnweb") {
-    } else {
         if (pagename == "home") {
             var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/home.html");
             page.innerHTML = resp;
@@ -22,7 +20,6 @@ function LoadPage(pagename) {
             var resp = httpGet("https://raw.githubusercontent.com/The-Developer-Nate/Base64ToRedirect/main/sites.html");
             page.innerHTML = reps;
         }
-    }
 }
 // window.open('https://thedevnate.github.io/Base64ToRedirect/done.html', 'Done!', 'width=1280,height=720,fullscreen=yes')
 window.LP = LoadPage;
